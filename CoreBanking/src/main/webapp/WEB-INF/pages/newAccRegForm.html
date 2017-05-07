@@ -1,19 +1,29 @@
 <!doctype html>
 <html>
 <head>
-  
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
 
 <!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-   
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   
- 	
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 
 <style>
 h2 {
@@ -48,10 +58,9 @@ h3 {
 		</tr>
 		<tr>
 			<th colspan="2" scope="col">
-			<!-- form page start -->
-			<form id="form1" name="form1"
-					method="post" action="doRegister.jsp">
-				<table width="100%" border="1" cellpadding="2" cellspacing="2"
+				<!-- form page start -->
+				<form id="form1" name="form1" method="post" action="doRegister.jsp">
+					<table width="100%" border="1" cellpadding="2" cellspacing="2"
 						style="border: #000000 solid 2px; padding: 5px;">
 						<tr>
 							<th colspan="3" bgcolor="#000000" scope="col"
@@ -91,11 +100,8 @@ h3 {
 						<tr>
 							<td width="30%"><div align="left">Name*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="name" type="text" align="middle"
-										placeholder="first" id="name" /> <input name="name"
-										type="text" align="middle" placeholder="middle" id="name" />
-									<input name="name" type="text" id="name" align="middle"
-										placeholder="last" />
+									<input name="name" type="text"
+										placeholder="FullName" id="name" /> 
 								</div></td>
 						</tr>
 						<tr>
@@ -107,7 +113,7 @@ h3 {
 						<tr>
 							<td width="30%"><div align="left">Gender*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<select name="gender">
+									<select name="gender" id="gender">
 										<option value="">--Select--</option>
 										<option value="MALE">Male</option>
 										<option value="FEMALE">Female</option>
@@ -118,7 +124,7 @@ h3 {
 						<tr>
 							<td width="30%"><div align="left">Nationality*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<select name="Nationality">
+									<select name="Nationality" id="Nationality">
 										<option value="indian">INDIAN</option>
 
 									</select>
@@ -153,7 +159,7 @@ h3 {
 
 								</div></td>
 						</tr>
-						
+
 						<tr>
 							<th colspan="3" bgcolor="#2E73A4" align="left" scope="col"
 								style="height: 20px;"><font color="#FFFFFF">Correspondence/Local
@@ -167,23 +173,19 @@ h3 {
 										<option value="Residential">Residential</option>
 										<option value="Business">Business</option>
 									</select> <br>
-									
-								</div></td>
-								<tr>
-								<td>Door No</td>
-								<td>
-									<input name="dno" type="text"
-										placeholder="Door/FlatNo."/>
-								</td>
-								</tr>
 
-								<tr>
-								<td>Block</td>
-								<td>
-									<input name="block" type="text"
-										placeholder="Streey/RoadName/Block"/>
-								</td>
-								</tr>
+								</div></td>
+						<tr>
+							<td>Door No</td>
+							<td><input name="dno" type="text" placeholder="Door/FlatNo." />
+							</td>
+						</tr>
+
+						<tr>
+							<td>Block</td>
+							<td><input name="block" type="text"
+								placeholder="Streey/RoadName/Block" /></td>
+						</tr>
 						<tr>
 							<td width="30%"><div align="left">Landmark / Street*</div></td>
 							<td width="65%" colspan="2"><div align="left">
@@ -281,21 +283,17 @@ h3 {
 
 									</select> <br>
 								</div></td>
-								<tr>
-								<td>Door No</td>
-								<td>
-									<input name="dno" type="text"
-										placeholder="Door/FlatNo."/>
-								</td>
-								</tr>
+						<tr>
+							<td>Door No</td>
+							<td><input name="dno" type="text" placeholder="Door/FlatNo." />
+							</td>
+						</tr>
 
-								<tr>
-								<td>Block</td>
-								<td>
-									<input name="block" type="text"
-										placeholder="Streey/RoadName/Block"/>
-								</td>
-								</tr>
+						<tr>
+							<td>Block</td>
+							<td><input name="block" type="text"
+								placeholder="Streey/RoadName/Block" /></td>
+						</tr>
 						<tr>
 							<td width="30%"><div align="left">Landmark / Street*</div></td>
 							<td width="65%" colspan="2"><div align="left">
@@ -384,13 +382,12 @@ h3 {
 									<input type="submit" value="Proceed">
 								</div></td>
 						</tr>
-   </table>
-   </form>
-   <!-- form end -->
-   </th>
-   </tr>
-   
 					</table>
-					<h3>@ Copyright SBI</h3>
+				</form> <!-- form end -->
+			</th>
+		</tr>
+
+	</table>
+	<h3>@ Copyright SBI</h3>
 </body>
 <footer> </footer>
