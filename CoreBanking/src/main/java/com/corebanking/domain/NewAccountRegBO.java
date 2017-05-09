@@ -1,13 +1,24 @@
 package com.corebanking.domain;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
+//parent class
 
 @Entity
+@Table(name="NEWCUSTREG")
 public class NewAccountRegBO {
 	@Id
 	@GenericGenerator(name = "gen1", strategy = "sequence", parameters = @Parameter(name = "sequence_name", value = "SBI_AC_NO"))
@@ -22,6 +33,10 @@ public class NewAccountRegBO {
 	private String COUNTRY;
 	private String MOTHER_NAME;
 	private Integer UID_NO;
+	@OneToMany(targetEntity = NewAccountAddrsBO.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+	@JoinColumn(name = "ADDRS_ID", referencedColumnName = "ACCOUNT_NUMBER")
+	@Fetch(FetchMode.JOIN)
+	private List<NewAccountAddrsBO> ADDRS;
 
 	public Long getACCOUNT_NUMBER() {
 		return ACCOUNT_NUMBER;
@@ -101,6 +116,14 @@ public class NewAccountRegBO {
 
 	public void setUID_NO(Integer uID_NO) {
 		UID_NO = uID_NO;
+	}
+
+	public List<NewAccountAddrsBO> getADDRS() {
+		return ADDRS;
+	}
+
+	public void setADDRS(List<NewAccountAddrsBO> aDDRS) {
+		ADDRS = aDDRS;
 	}
 
 }
