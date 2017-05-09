@@ -4,5 +4,5 @@ import com.corebanking.domain.NewAccountRegBO;
 
 public interface NewAccountRegDAO {
 
-	public int saveNewCustomerData(NewAccountRegBO bo);
+	public Long saveNewCustomerData(NewAccountRegBO bo);
 }

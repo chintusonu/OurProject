@@ -24,7 +24,7 @@ public class BankingController {
 		return "new_account_reg";
 	}
 	
-	@RequestMapping(value="/register.htm",method=RequestMethod.POST)
+	@RequestMapping(value="/newregister.htm",method=RequestMethod.POST)
 	public String submitRegistrationForm(Map<String,Object> map,@ModelAttribute("accountRegBO") NewAccountRegBO accountRegBO){
 		String result=null;
 		NewAccountRegDTO dto=null;

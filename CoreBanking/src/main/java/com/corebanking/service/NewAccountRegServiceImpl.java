@@ -19,9 +19,12 @@ private NewAccountRegDAO dao;
 		bo=new NewAccountRegBO();
 		BeanUtils.copyProperties(dto, bo);
 		//use dao
-		int id=0;
+		Long id=0l;
 		id=dao.saveNewCustomerData(bo);
-			return "Employee Registered with "+id;
+		
+		if(id>0)
+			return "Your Information Registered SuccessFully.. With Account Number  "+id;
+		else
+			return "Registration Failed";
 	}
-
 }

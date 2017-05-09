@@ -34,13 +34,13 @@ public class NewAccountRegBO {
 	private String COUNTRY;
 	private String MOTHER_NAME;
 	private Integer UID_NO;
-	@OneToMany(targetEntity = NewAccountAddrsBO.class, 
+	/*@OneToMany(targetEntity = NewAccountAddrsBO.class, 
 			cascade = CascadeType.ALL, fetch = FetchType.LAZY, 
 			orphanRemoval = true)
 	@JoinColumn(name = "ADDRS_ID", referencedColumnName = "ACCOUNT_NUMBER")
 	@OrderColumn(name="LIST_INDEX")
 	private List<NewAccountAddrsBO> ADDRS;
-
+*/
 	public Long getACCOUNT_NUMBER() {
 		return ACCOUNT_NUMBER;
 	}
@@ -120,22 +120,13 @@ public class NewAccountRegBO {
 	public void setUID_NO(Integer uID_NO) {
 		UID_NO = uID_NO;
 	}
-
+/*
 	public List<NewAccountAddrsBO> getADDRS() {
 		return ADDRS;
 	}
 
 	public void setADDRS(List<NewAccountAddrsBO> aDDRS) {
 		ADDRS = aDDRS;
-	}
+	}*/
 
-	@Override
-	public String toString() {
-		return "NewAccountRegBO [ACCOUNT_NUMBER=" + ACCOUNT_NUMBER + ", CUSTOMER_TYPE=" + CUSTOMER_TYPE
-				+ ", RESIDENTIAL_STATUS=" + RESIDENTIAL_STATUS + ", FULL_NAME=" + FULL_NAME + ", DOB=" + DOB
-				+ ", GENDER=" + GENDER + ", NATIONALITY=" + NATIONALITY + ", COUNTRY=" + COUNTRY + ", MOTHER_NAME="
-				+ MOTHER_NAME + ", UID_NO=" + UID_NO + "]";
-	}
-
-	
 }
