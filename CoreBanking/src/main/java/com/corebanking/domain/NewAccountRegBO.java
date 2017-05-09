@@ -19,7 +19,7 @@ import org.hibernate.annotations.Parameter;
 //parent class
 
 @Entity
-@Table(name="NEWCUSTREG")
+@Table(name = "NEWCUSTREG")
 public class NewAccountRegBO {
 	@Id
 	@GenericGenerator(name = "gen1", strategy = "sequence", parameters = @Parameter(name = "sequence_name", value = "SBI_AC_NO"))
@@ -34,13 +34,12 @@ public class NewAccountRegBO {
 	private String COUNTRY;
 	private String MOTHER_NAME;
 	private Integer UID_NO;
-	/*@OneToMany(targetEntity = NewAccountAddrsBO.class, 
-			cascade = CascadeType.ALL, fetch = FetchType.LAZY, 
-			orphanRemoval = true)
+	
+	@OneToMany(targetEntity = NewAccountAddrsBO.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
 	@JoinColumn(name = "ADDRS_ID", referencedColumnName = "ACCOUNT_NUMBER")
-	@OrderColumn(name="LIST_INDEX")
+	@OrderColumn(name = "LIST_INDEX")
 	private List<NewAccountAddrsBO> ADDRS;
-*/
+
 	public Long getACCOUNT_NUMBER() {
 		return ACCOUNT_NUMBER;
 	}
@@ -120,13 +119,12 @@ public class NewAccountRegBO {
 	public void setUID_NO(Integer uID_NO) {
 		UID_NO = uID_NO;
 	}
-/*
+
 	public List<NewAccountAddrsBO> getADDRS() {
 		return ADDRS;
 	}
 
 	public void setADDRS(List<NewAccountAddrsBO> aDDRS) {
 		ADDRS = aDDRS;
-	}*/
-
+	}
 }
