@@ -34,8 +34,14 @@ public class NewAccountRegBO {
 	private String COUNTRY;
 	private String MOTHER_NAME;
 	private Integer UID_NO;
+<<<<<<< HEAD
 	
 	@OneToMany(targetEntity = NewAccountAddrsBO.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+=======
+	@OneToMany(targetEntity = NewAccountAddrsBO.class, 
+			cascade = CascadeType.ALL, fetch = FetchType.LAZY, 
+			orphanRemoval = true)
+>>>>>>> branch 'master' of https://github.com/chintusonu/OurProject.git
 	@JoinColumn(name = "ADDRS_ID", referencedColumnName = "ACCOUNT_NUMBER")
 	@OrderColumn(name = "LIST_INDEX")
 	private List<NewAccountAddrsBO> ADDRS;
@@ -127,4 +133,8 @@ public class NewAccountRegBO {
 	public void setADDRS(List<NewAccountAddrsBO> aDDRS) {
 		ADDRS = aDDRS;
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/chintusonu/OurProject.git
 }
