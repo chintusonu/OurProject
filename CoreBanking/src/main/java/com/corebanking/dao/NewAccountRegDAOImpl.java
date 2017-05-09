@@ -16,15 +16,13 @@ public class NewAccountRegDAOImpl implements NewAccountRegDAO {
 	public int saveNewCustomerData(NewAccountRegBO bo) {
 		Transaction tx = null;
 		int id = 0;
-      try{
-		tx = ht.getSessionFactory().getCurrentSession().beginTransaction();
-		id = (Integer) ht.save(bo);
-		tx.commit();
+		try {
+			tx = ht.getSessionFactory().getCurrentSession().beginTransaction();
+			id = (Integer) ht.save(bo);
+			tx.commit();
+		} catch (Exception e) {
+			tx.rollback();
+		}
 		return id;
-      }catch (Exception e) {
-		tx.rollback();
 	}
-	return id;
-	}
-
 }

@@ -16,6 +16,7 @@ private NewAccountRegDAO dao;
 	public String register(NewAccountRegDTO dto) {
 		NewAccountRegBO bo=null;
     //convert DTO Object to Bo object
+		bo=new NewAccountRegBO();
 		BeanUtils.copyProperties(dto, bo);
 		//use dao
 		int id=0;
