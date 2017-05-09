@@ -120,13 +120,13 @@ public class NewAccountRegBO {
 	public void setUID_NO(Integer uID_NO) {
 		UID_NO = uID_NO;
 	}
-/*
+
 	public List<NewAccountAddrsBO> getADDRS() {
 		return ADDRS;
 	}
 
 	public void setADDRS(List<NewAccountAddrsBO> aDDRS) {
 		ADDRS = aDDRS;
-	}*/
+	}
 
 }

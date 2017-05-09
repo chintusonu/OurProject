@@ -1,5 +1,7 @@
 package com.corebanking.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.BeanUtils;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.corebanking.domain.NewAccountAddrsBO;
 import com.corebanking.domain.NewAccountRegBO;
 import com.corebanking.dto.NewAccountRegDTO;
 import com.corebanking.service.NewAccountRegService;
@@ -37,6 +40,6 @@ public class BankingController {
 		result=service.register(dto);
 		map.put("Result", result);
 		return "result";
+		
 	}
-	
 }
