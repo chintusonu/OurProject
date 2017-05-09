@@ -30,6 +30,7 @@ public class BankingController {
 		NewAccountRegDTO dto=null;
 		
 		//convert bo to dto
+		
 		dto=new NewAccountRegDTO();
 		BeanUtils.copyProperties(accountRegBO, dto);
 		
