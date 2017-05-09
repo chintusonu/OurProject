@@ -88,13 +88,11 @@ h3 {
 							<td width="30%"><div align="left">Residential Status*</div></td>
 							<td width="65%" colspan="2"><label>
 									<div align="left">
-										<input type="radio" name="rs" value="Resident Individual"
-											checked="checked" /> Resident Individual 
-											<input type="radio"
+										<input type="radio" name="RESIDENTIAL_STATUS" value="Resident Individual"
+											checked="checked" /> Resident Individual <input type="radio"
 											name="rs" value="Non Resident Indian" /> Non Resident Indian
 										<input type="radio" name="rs" value="Foreign National" />
-										                                             Foreign National 
-										<input type="radio" name="rs"
+										Foreign National <input type="radio" name="rs"
 											value="Person of Indian Origin" /> Person of Indian Origin
 									</div>
 							</label></td>
@@ -102,19 +100,19 @@ h3 {
 						<tr>
 							<td width="30%"><div align="left">Name*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="name" type="text" placeholder="FullName" id="" />
+									<input name="FULL_NAME" type="text" placeholder="FullName" id="" />
 								</div></td>
 						</tr>
 						<tr>
 							<td width="30%"><div align="left">Date Of Birth*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input type="date" name="dob" id="">
+									<input type="date" name="DOB" id="">
 								</div></td>
 						</tr>
 						<tr>
 							<td width="30%"><div align="left">Gender*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<select name="gender" id="">
+									<select name="GENDER" id="">
 										<option value="">--Select--</option>
 										<option value="MALE">Male</option>
 										<option value="FEMALE">Female</option>
@@ -124,17 +122,19 @@ h3 {
 						</tr>
 						<tr>
 							<td width="30%"><div align="left">Nationality*</div></td>
-							<td width="65%" colspan="2"><div align="left">
-									<select name="Nationality" id="">
+							<td width="65%" colspan="2">
+							<div align="left">
+									<select name="NATIONALITY" id="">
 										<option value="indian">INDIAN</option>
 
 									</select>
-								</div></td>
+								</div>
+								</td>
 						</tr>
 						<tr>
 							<td width="30%"><div align="left">Country*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<select name="country">
+									<select name="COUNTRY">
 										<option value="">Select Country</option>
 										<option value="IN">India</option>
 
@@ -143,11 +143,13 @@ h3 {
 						</tr>
 						<tr>
 							<td width="30%"><div align="left">Mother's Name*</div></td>
-							<td width="65%" colspan="2"><div align="left">
-									<input name="name" type="text" placeholder="first" id="fname">
-									<input name="name" type="text" placeholder="middle" id="mname">
-									<input name="name" type="text" id="" placeholder="last">
-								</div></td>
+							<td width="65%" colspan="2">
+							<div align="left">
+									<input name="MOTHER_NAME" type="text" placeholder="first" id="fname">
+									<input name="MOTHER_NAME" type="text" placeholder="middle" id="mname">
+									<input name="MOTHER_NAME" type="text" id="" placeholder="last">
+								</div>
+								</td>
 						</tr>
 
 						</div>
@@ -156,7 +158,7 @@ h3 {
 						<tr>
 							<td width="30%"><div align="left">Adhar No*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="name" type="text" id="" placeholder="Adhar No" />
+									<input name="UID_NO" type="text" id="" placeholder="Adhar No" />
 
 								</div></td>
 						</tr>
@@ -392,4 +394,7 @@ h3 {
 	</table>
 	<h3>@ Copyright SBI</h3>
 </body>
-<footer> </footer>
+<footer> 
+
+</footer>
+</html>
