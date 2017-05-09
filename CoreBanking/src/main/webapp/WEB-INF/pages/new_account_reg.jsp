@@ -79,9 +79,9 @@ h3 {
 							<td width="30%"><div align="left">Customer Type*</div></td>
 							<td width="65%" colspan="2"><label>
 									<div align="left">
-										<input type="radio" name="ct" value="Public" checked="checked" />Public
-										<input type="radio" name="ct" value="Staff" /> Staff <input
-											type="radio" name="ct" value="SeniorCitizen" /> Senior
+										<input type="radio" name="CUSTOMER_TYPE" value="Public" checked="checked" />Public
+										<input type="radio" name="CUSTOMER_TYPE" value="Staff" /> Staff <input
+											type="radio" name="CUSTOMER_TYPE" value="SeniorCitizen" /> Senior
 										Citizen <input type="radio" name="ct" value="Minor" /> Minor
 									</div>
 							</label></td>
@@ -92,10 +92,10 @@ h3 {
 									<div align="left">
 										<input type="radio" name="RESIDENTIAL_STATUS"
 											value="Resident Individual" checked="checked" /> Resident
-										Individual <input type="radio" name="rs"
+										Individual <input type="radio" name="RESIDENTIAL_STATUS"
 											value="Non Resident Indian" /> Non Resident Indian <input
-											type="radio" name="rs" value="Foreign National" /> Foreign
-										National <input type="radio" name="rs"
+											type="radio" name="RESIDENTIAL_STATUS" value="Foreign National" /> Foreign
+										National <input type="radio" name="RESIDENTIAL_STATUS"
 											value="Person of Indian Origin" /> Person of Indian Origin
 									</div>
 							</label></td>
@@ -167,7 +167,7 @@ h3 {
 
 								</div></td>
 						</tr>
-<!-- 
+
 						<tr>
 							<th colspan="3" bgcolor="#2E73A4" align="left" scope="col"
 								style="height: 20px;"><font color="#FFFFFF">Correspondence/Local
@@ -176,7 +176,7 @@ h3 {
 						<tr>
 							<td width="30%"><div align="left">Adress Type*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<select name="addtype">
+									<select name="ADDRESS_TYPE">
 										<option value="">--Address Type--</option>
 										<option value="Residential">Residential</option>
 										<option value="Business">Business</option>
@@ -187,14 +187,14 @@ h3 {
 						<tr>
 							<td width="30%"><div align="left">Adress*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="HomeAddress" type="text" id=""
-										placeholder="DoorNo/Streey/RoadName/Block,Locality/Village" />
+									<textarea name="ADDRESS" type="text" id=""
+										placeholder="DoorNo/Street/RoadName/Block,Locality/Village"></textarea>
 								</div></td>
 						</tr>
 						<tr>
 							<td width="30%"><div align="left">State/U.T.*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<select name=slist>
+									<select name=STATE>
 										<option value="">--Select State--</option>
 										<option value="Andaman and Nicobar Islands">Andaman
 											and Nicobar Islands</option>
@@ -240,28 +240,20 @@ h3 {
 						<tr>
 							<td width="30%"><div align="left">PIN*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="pin" type="number" id="" />
+									<input name="PIN" type="number" id="" />
 								</div></td>
 						</tr>
 						<tr>
 							<td width="30%"><div align="left">City*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="city" type="text" id="" />
+									<input name="CITY" type="text" id="" />
 
 								</div></td>
 						</tr>
 						<tr>
 							<td width="30%"><div align="left">Mobile No.</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="mobile" type="text" id="" />
-
-								</div></td>
-						</tr>
-
-						<tr>
-							<td width="30%"><div align="left">Fax No.</div></td>
-							<td width="65%" colspan="2"><div align="left">
-									<input name="faxno" type="text" id="" />
+									<input name="MOBILE_NO" type="text" id="" />
 
 								</div></td>
 						</tr>
@@ -277,21 +269,21 @@ h3 {
 							<td width="65%" colspan="2"><div align="left">
 									<select name="adress">
 										<option value="">NO</option>
-										<option value="Residential">YES</option>
+										<option value="">YES</option>
 
 									</select> <br>
 								</div></td>
 						<tr>
 							<td width="30%"><div align="left">Adress*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="HomeAddress" type="text" id=""
-										placeholder="DoorNo/Streey/RoadName/Block,Locality/Village" />
+									<textarea name="ADDRESS" type="text" id=""
+										placeholder="DoorNo/Street/RoadName/Block,Locality/Village"></textarea>
 								</div></td>
 						</tr>
 						<tr>
 							<td width="30%"><div align="left">State/U.T.*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<select name=slist>
+									<select name=STATE>
 										<option value="">--Select State--</option>
 										<option value="Andaman and Nicobar Islands">Andaman
 											and Nicobar Islands</option>
@@ -337,24 +329,24 @@ h3 {
 						<tr>
 							<td width="30%"><div align="left">PIN*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="pin" type="number" id="" />
+									<input name="PIN" type="number" id="" />
 								</div></td>
 						</tr>
 						<tr>
 							<td width="30%"><div align="left">City*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="city" type="text" id="" />
+									<input name="CITY" type="text" id="" />
 
 								</div></td>
 						</tr>
 						<tr>
 							<td width="30%"><div align="left">Telephone No.</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="tNumber" type="text" id="" />
+									<input name="MOBILE_NO" type="text" id="" />
 
 								</div></td>
 						</tr>
-						-->
+					
 	 						<tr>
 							<td width="95%" colspan="3"><div align="center">
 									<input type="submit" value="Proceed">
