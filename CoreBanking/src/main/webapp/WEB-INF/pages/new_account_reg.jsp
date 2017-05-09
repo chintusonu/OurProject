@@ -167,7 +167,7 @@ h3 {
 
 								</div></td>
 						</tr>
-<!-- 
+
 						<tr>
 							<th colspan="3" bgcolor="#2E73A4" align="left" scope="col"
 								style="height: 20px;"><font color="#FFFFFF">Correspondence/Local
@@ -354,7 +354,7 @@ h3 {
 
 								</div></td>
 						</tr>
-						-->
+						
 	 						<tr>
 							<td width="95%" colspan="3"><div align="center">
 									<input type="submit" value="Proceed">
