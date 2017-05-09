@@ -9,9 +9,9 @@
 
 
 	<bean id="apacheDBCP" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/telusko" />
-		<property name="username" value="root" />
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:ORCL" />
+		<property name="username" value="Scott" />
 		<property name="password" value="tiger" />
 		<property name="initialSize" value="10" />
 		<property name="maxActive" value="20" />
@@ -31,7 +31,7 @@
 
 		<property name="hibernateProperties">
 			<props>
-				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
 				<prop key="hibernate.current_session_context_class">thread</prop>	<!-- for transaction-synchronized Session for current thread -->
 				<prop key="hibernate.show_sql">true</prop>
 				<prop key="org.hibernate.flushMode">AUTO</prop>
