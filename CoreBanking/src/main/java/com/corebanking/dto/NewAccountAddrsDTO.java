@@ -1,14 +1,14 @@
 package com.corebanking.dto;
 
-import java.io.Serializable;
-
-public class NewAccountAddrsDTO implements Serializable{
+//child class
+public class NewAccountAddrsDTO {
 	private String ADDRESS_TYPE;
 	private String ADDRESS;
 	private String STATE;
 	private Integer PIN;
 	private String CITY;
 	private Long MOBILE_NO;
+	
 	public String getADDRESS_TYPE() {
 		return ADDRESS_TYPE;
 	}
@@ -44,6 +44,11 @@ public class NewAccountAddrsDTO implements Serializable{
 	}
 	public void setMOBILE_NO(Long mOBILE_NO) {
 		MOBILE_NO = mOBILE_NO;
+	}
+	@Override
+	public String toString() {
+		return "NewAccountAddrsDTO [ADDRESS_TYPE=" + ADDRESS_TYPE + ", ADDRESS=" + ADDRESS + ", STATE=" + STATE
+				+ ", PIN=" + PIN + ", CITY=" + CITY + ", MOBILE_NO=" + MOBILE_NO + "]";
 	}
 	
 	

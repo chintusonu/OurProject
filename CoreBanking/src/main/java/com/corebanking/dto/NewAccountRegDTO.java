@@ -1,6 +1,9 @@
 package com.corebanking.dto;
 
 import java.io.Serializable;
+import java.util.List;
+
+import com.corebanking.domain.NewAccountAddrsBO;
 
 public class NewAccountRegDTO implements Serializable {
 	private Long ACCOUNT_NUMBER;
@@ -13,6 +16,17 @@ public class NewAccountRegDTO implements Serializable {
 	private String COUNTRY;
 	private String MOTHER_NAME;
 	private Integer UID_NO;
+	private List<NewAccountAddrsBO> ADDRS;
+	
+	
+
+	public List<NewAccountAddrsBO> getADDRS() {
+		return ADDRS;
+	}
+
+	public void setADDRS(List<NewAccountAddrsBO> aDDRS) {
+		ADDRS = aDDRS;
+	}
 
 	public Long getACCOUNT_NUMBER() {
 		return ACCOUNT_NUMBER;
@@ -93,4 +107,14 @@ public class NewAccountRegDTO implements Serializable {
 	public void setUID_NO(Integer uID_NO) {
 		UID_NO = uID_NO;
 	}
+
+	@Override
+	public String toString() {
+		return "NewAccountRegDTO [ACCOUNT_NUMBER=" + ACCOUNT_NUMBER + ", CUSTOMER_TYPE=" + CUSTOMER_TYPE
+				+ ", RESIDENTIAL_STATUS=" + RESIDENTIAL_STATUS + ", FULL_NAME=" + FULL_NAME + ", DOB=" + DOB
+				+ ", GENDER=" + GENDER + ", NATIONALITY=" + NATIONALITY + ", COUNTRY=" + COUNTRY + ", MOTHER_NAME="
+				+ MOTHER_NAME + ", UID_NO=" + UID_NO + ", ADDRS=" + ADDRS + "]";
+	}
+
+	
 }

@@ -11,13 +11,20 @@ import com.corebanking.domain.NewAccountRegBO;
 public class NewAccountRegDAOImpl implements NewAccountRegDAO {
 	@Autowired
 	private HibernateTemplate ht;
-	
+
 	@Override
 	public int saveNewCustomerData(NewAccountRegBO bo) {
-		Transaction tx=ht.getSessionFactory().getCurrentSession().beginTransaction();
-		
-		
-		return 0;
+		Transaction tx = null;
+		int id = 0;
+      try{
+		tx = ht.getSessionFactory().getCurrentSession().beginTransaction();
+		id = (Integer) ht.save(bo);
+		tx.commit();
+		return id;
+      }catch (Exception e) {
+		tx.rollback();
+	}
+	return id;
 	}
 
 }

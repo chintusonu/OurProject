@@ -53,6 +53,11 @@ public class NewAccountAddrsBO {
 	public void setMOBILE_NO(Long mOBILE_NO) {
 		MOBILE_NO = mOBILE_NO;
 	}
+	@Override
+	public String toString() {
+		return "NewAccountAddrsBO [ADDRESS_TYPE=" + ADDRESS_TYPE + ", ADDRESS=" + ADDRESS + ", STATE=" + STATE
+				+ ", PIN=" + PIN + ", CITY=" + CITY + ", MOBILE_NO=" + MOBILE_NO + "]";
+	}
 	
 	
 }

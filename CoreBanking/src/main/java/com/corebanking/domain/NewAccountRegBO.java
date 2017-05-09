@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Fetch;
@@ -33,9 +34,11 @@ public class NewAccountRegBO {
 	private String COUNTRY;
 	private String MOTHER_NAME;
 	private Integer UID_NO;
-	@OneToMany(targetEntity = NewAccountAddrsBO.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+	@OneToMany(targetEntity = NewAccountAddrsBO.class, 
+			cascade = CascadeType.ALL, fetch = FetchType.LAZY, 
+			orphanRemoval = true)
 	@JoinColumn(name = "ADDRS_ID", referencedColumnName = "ACCOUNT_NUMBER")
-	@Fetch(FetchMode.JOIN)
+	@OrderColumn(name="LIST_INDEX")
 	private List<NewAccountAddrsBO> ADDRS;
 
 	public Long getACCOUNT_NUMBER() {
@@ -126,4 +129,13 @@ public class NewAccountRegBO {
 		ADDRS = aDDRS;
 	}
 
+	@Override
+	public String toString() {
+		return "NewAccountRegBO [ACCOUNT_NUMBER=" + ACCOUNT_NUMBER + ", CUSTOMER_TYPE=" + CUSTOMER_TYPE
+				+ ", RESIDENTIAL_STATUS=" + RESIDENTIAL_STATUS + ", FULL_NAME=" + FULL_NAME + ", DOB=" + DOB
+				+ ", GENDER=" + GENDER + ", NATIONALITY=" + NATIONALITY + ", COUNTRY=" + COUNTRY + ", MOTHER_NAME="
+				+ MOTHER_NAME + ", UID_NO=" + UID_NO + "]";
+	}
+
+	
 }
