@@ -24,8 +24,8 @@
 
 		<property name="annotatedClasses">
 			<list>
-				<value>com.nt.entity.FeedBack</value>
-				<value>com.nt.entity.Question</value>
+				<value>com.corebanking.domain.NewAccountRegBO</value>
+				<value>com.corebanking.domain.NewAccountAddrsBO</value>
 			</list>
 		</property>
 
@@ -49,6 +49,6 @@
 		<property name="sessionFactory" ref="sesfact" />
 	</bean>
 <tx:annotation-driven transaction-manager="txmgr"/>
-	<context:component-scan base-package="com.nt.dao" />
+	<context:component-scan base-package="com.corebanking" />
 
 </beans>
