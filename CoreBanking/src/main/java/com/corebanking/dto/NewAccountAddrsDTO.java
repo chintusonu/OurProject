@@ -1,7 +1,9 @@
 package com.corebanking.dto;
 
+import java.io.Serializable;
+
 //child class
-public class NewAccountAddrsDTO {
+public class NewAccountAddrsDTO implements Serializable{
 	private String ADDRESS_TYPE;
 	private String ADDRESS;
 	private String STATE;

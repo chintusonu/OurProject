@@ -1,5 +1,6 @@
 package com.corebanking.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -36,8 +37,8 @@ public class NewAccountRegBO {
 	private Integer UID_NO;
 
 	@OneToMany(targetEntity = NewAccountAddrsBO.class, 
-			cascade = CascadeType.ALL, fetch = FetchType.LAZY, 
-			orphanRemoval = true)
+			cascade = CascadeType.ALL, fetch = FetchType.LAZY 
+			/*orphanRemoval = true*/)
 
 	@JoinColumn(name = "ADDRS_ID", referencedColumnName = "ACCOUNT_NUMBER")
 	@OrderColumn(name = "LIST_INDEX")

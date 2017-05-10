@@ -1,7 +1,5 @@
 package com.corebanking.controller;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.BeanUtils;
@@ -31,6 +29,7 @@ public class BankingController {
 	public String submitRegistrationForm(Map<String,Object> map,@ModelAttribute("accountRegBO") NewAccountRegBO accountRegBO){
 		String result=null;
 		NewAccountRegDTO dto=null;
+		
 		
 		//convert bo to dto
 		dto=new NewAccountRegDTO();

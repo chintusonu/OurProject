@@ -346,11 +346,7 @@ h3 {
 
 								</div></td>
 						</tr>
-<<<<<<< HEAD
-						
-=======
-					
->>>>>>> branch 'master' of https://github.com/chintusonu/OurProject.git
+
 	 						<tr>
 							<td width="95%" colspan="3"><div align="center">
 									<input type="submit" value="Proceed">

@@ -54,11 +54,19 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.4</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.0.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.hynnet/oracle-driver-ojdbc6 -->
+		<dependency>
+			<groupId>com.hynnet</groupId>
+			<artifactId>oracle-driver-ojdbc6</artifactId>
+			<version>12.1.0.1</version>
 		</dependency>
 
 
