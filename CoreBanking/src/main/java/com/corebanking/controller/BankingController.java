@@ -1,5 +1,7 @@
 package com.corebanking.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.BeanUtils;
@@ -26,10 +28,14 @@ public class BankingController {
 	}
 	
 	@RequestMapping(value="/newregister.htm",method=RequestMethod.POST)
-	public String submitRegistrationForm(Map<String,Object> map,@ModelAttribute("accountRegBO") NewAccountRegBO accountRegBO){
+	public String submitRegistrationForm(Map<String,Object> map,@ModelAttribute("accountRegBO") NewAccountRegBO accountRegBO,NewAccountAddrsBO addrsBO){
 		String result=null;
 		NewAccountRegDTO dto=null;
 		
+		List<NewAccountAddrsBO> list=new ArrayList<NewAccountAddrsBO>();
+		list.add(addrsBO);
+		
+		accountRegBO.setADDRS(list);
 		
 		//convert bo to dto
 		dto=new NewAccountRegDTO();

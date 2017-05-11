@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.corebanking.dao.NewAccountRegDAO;
-import com.corebanking.domain.NewAccountAddrsBO;
 import com.corebanking.domain.NewAccountRegBO;
 import com.corebanking.dto.NewAccountRegDTO;
 
@@ -25,13 +24,10 @@ public class NewAccountRegServiceImpl implements NewAccountRegService{
 		
 		//use dao
 		Long id=0l;
-		//NewAccountAddrsBO addbo=new NewAccountAddrsBO();
-		//bo.setADDRS(bo.getADDRS());
-		//System.out.println(bo.getADDRS());
 		id=dao.saveNewCustomerData(bo);
 		
 		if(id>0)
-			return "Your Information Registered SuccessFully.. With Account Number  "+id+"--"+bo.getADDRS();
+			return "Your Information Registered SuccessFully.. With Account Number  "+id;
 		else
 			return "Registration Failed";
 	}

@@ -149,10 +149,7 @@ h3 {
 							<td width="30%"><div align="left">Mother's Name*</div></td>
 							<td width="65%" colspan="2">
 								<div align="left">
-									<input name="MOTHER_NAME" type="text" placeholder="first"
-										id="fname"> <input name="MOTHER_NAME" type="text"
-										placeholder="middle" id="mname"> <input
-										name="MOTHER_NAME" type="text" id="" placeholder="last">
+									<input name="MOTHER_NAME" type="text" placeholder="Mother's Name"/>
 								</div>
 							</td>
 						</tr>
@@ -258,7 +255,7 @@ h3 {
 								</div></td>
 						</tr>
 
-						<tr>
+						<!-- <tr>
 							<th colspan="3" bgcolor="#2E73A4" align="left" scope="col"
 								style="height: 20px;"><font color="#FFFFFF">Permanent
 									Address</font></th>
@@ -346,7 +343,7 @@ h3 {
 
 								</div></td>
 						</tr>
-
+ -->
 	 						<tr>
 							<td width="95%" colspan="3"><div align="center">
 									<input type="submit" value="Proceed">
