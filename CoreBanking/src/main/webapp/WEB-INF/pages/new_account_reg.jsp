@@ -82,7 +82,7 @@ h3 {
 										<input type="radio" name="CUSTOMER_TYPE" value="Public" checked="checked" />Public
 										<input type="radio" name="CUSTOMER_TYPE" value="Staff" /> Staff <input
 											type="radio" name="CUSTOMER_TYPE" value="SeniorCitizen" /> Senior
-										Citizen <input type="radio" name="ct" value="Minor" /> Minor
+										Citizen <input type="radio" name="CUSTOMER_TYPE" value="Minor" /> Minor
 									</div>
 							</label></td>
 						</tr>
@@ -140,7 +140,7 @@ h3 {
 							<td width="65%" colspan="2"><div align="left">
 									<select name="COUNTRY">
 										<option value="">Select Country</option>
-										<option value="IN">India</option>
+										<option value="INDIA">India</option>
 
 									</select>
 								</div></td>
@@ -160,7 +160,7 @@ h3 {
 						<tr>
 							<td width="30%"><div align="left">Adhar No*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="UID_NO " type="text" id="" placeholder="Adhar No" />
+									<input name="UID_NO" type="text" id="" placeholder="Adhar No" />
 
 								</div></td>
 						</tr>
