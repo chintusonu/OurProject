@@ -24,7 +24,20 @@
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+function FillAddress(f) {
+  if(f.billingtoo.checked == true) {
+    f.ADDRESS1.value = f.ADDRESS.value;
+    f.STATE1.value = f.STATE.value;
+	f.PIN1.value = f.PIN.value;
+	f.CITY1.value = f.CITY.value;
+	f.MOBILE_NO1.value = f.MOBILE_NO.value;
+    f.faxno1.value = f.faxno.value;
+	f.faxno1.value = f.faxno.value;
 
+  }
+}
+</script>
 
 
 <style>
@@ -255,7 +268,7 @@ h3 {
 								</div></td>
 						</tr>
 
-						<!-- <tr>
+						<tr>
 							<th colspan="3" bgcolor="#2E73A4" align="left" scope="col"
 								style="height: 20px;"><font color="#FFFFFF">Permanent
 									Address</font></th>
@@ -264,23 +277,20 @@ h3 {
 							<td width="30%"><div align="left">Same As
 									Correspondence Adress</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<select name="adress">
-										<option value="">NO</option>
-										<option value="">YES</option>
-
-									</select> <br>
+									<input type="checkbox" name="billingtoo" onclick="FillAddress(this.form)">
+<em>Check this box if same as Correspondence Adress </em> <br>
 								</div></td>
 						<tr>
 							<td width="30%"><div align="left">Adress*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<textarea name="ADDRESS" type="text" id=""
+									<textarea name="ADDRESS1" type="text" id=""
 										placeholder="DoorNo/Street/RoadName/Block,Locality/Village"></textarea>
 								</div></td>
 						</tr>
 						<tr>
 							<td width="30%"><div align="left">State/U.T.*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<select name=STATE>
+									<select name=STATE1>
 										<option value="">--Select State--</option>
 										<option value="Andaman and Nicobar Islands">Andaman
 											and Nicobar Islands</option>
@@ -326,24 +336,23 @@ h3 {
 						<tr>
 							<td width="30%"><div align="left">PIN*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="PIN" type="number" id="" />
+									<input name="PIN1" type="number" id="" />
 								</div></td>
 						</tr>
 						<tr>
 							<td width="30%"><div align="left">City*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="CITY" type="text" id="" />
+									<input name="CITY1" type="text" id="" />
 
 								</div></td>
 						</tr>
 						<tr>
-							<td width="30%"><div align="left">Telephone No.</div></td>
+							<td width="30%"><div align="left">Mobile No.</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<input name="MOBILE_NO" type="text" id="" />
-
-								</div></td>
+									<input name="MOBILE_NO1" type="text" id="" />
+								</div>
+								</td>
 						</tr>
- -->
 	 						<tr>
 							<td width="95%" colspan="3"><div align="center">
 									<input type="submit" value="Proceed">
