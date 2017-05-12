@@ -50,7 +50,11 @@ public class BankingController {
 		
 	}
 
-	@RequestMapping(value="",method=RequestMethod.POST)
+	@RequestMapping(value="getOnlineRegForm.htm")
+	public String showOnlineRegistrationForm(){
+		return "registration";
+	}
+	@RequestMapping(value="/newOnlineregister.htm",method=RequestMethod.POST)
 	public String registerOnlineDetails(Map<String,Object> map,@ModelAttribute("accountOnlineBO") NewOnlineAccountBO accountOnlineBO){
 		String result=null;
 		NewOnlineAccountDTO dto=null;

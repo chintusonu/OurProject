@@ -53,7 +53,7 @@ h3 {
 
 		<tr>
 			<th colspan="2" scope="col">
-				<form id="form1" name="form1" method="post" action="">
+				<form id="form1" name="form1" method="post" action="newOnlineregister.htm">
 					<table width="100%" border="0" cellpadding="2" cellspacing="2"
 						style="border: #000000 solid 2px; padding: 5px;">
 						<tr>
