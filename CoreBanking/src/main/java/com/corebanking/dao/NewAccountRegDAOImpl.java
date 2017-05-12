@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.corebanking.domain.NewAccountAddrsBO;
 import com.corebanking.domain.NewAccountRegBO;
+import com.corebanking.domain.NewOnlineAccountBO;
 
 @Transactional(readOnly=false,propagation=Propagation.REQUIRES_NEW)
 @Repository
@@ -39,8 +40,20 @@ public class NewAccountRegDAOImpl implements NewAccountRegDAO {
 			id=(Long) ht.save(bo);
 			ht.flush();
 			tx.commit();
+			System.out.println(id);
+		return id;
+	}
 	
-			 
+	@Override
+	public Long insertNewCustomer(NewOnlineAccountBO bo) {
+		Transaction tx = null;
+		Long id = 0l;
+
+		tx = ht.getSessionFactory().getCurrentSession().beginTransaction();
+		id = (Long) ht.save(bo);
+		ht.flush();
+		tx.commit();
+
 		System.out.println(id);
 		return id;
 	}

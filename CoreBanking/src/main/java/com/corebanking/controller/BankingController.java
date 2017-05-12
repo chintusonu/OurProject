@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.corebanking.domain.NewAccountAddrsBO;
 import com.corebanking.domain.NewAccountRegBO;
+import com.corebanking.domain.NewOnlineAccountBO;
 import com.corebanking.dto.NewAccountRegDTO;
+import com.corebanking.dto.NewOnlineAccountDTO;
 import com.corebanking.service.NewAccountRegService;
 
 @Controller
@@ -47,4 +49,21 @@ public class BankingController {
 		return "result";
 		
 	}
+
+	@RequestMapping(value="",method=RequestMethod.POST)
+	public String registerOnlineDetails(Map<String,Object> map,@ModelAttribute("accountOnlineBO") NewOnlineAccountBO accountOnlineBO){
+		String result=null;
+		NewOnlineAccountDTO dto=null;
+	
+		//convert bo to dto
+		dto=new NewOnlineAccountDTO();
+		BeanUtils.copyProperties(accountOnlineBO, dto);
+		
+		//use service
+		result=service.registerOnlineAccount(dto);
+		map.put("Result", result);
+		return "result";
+		
+	}
+
 }

@@ -6,7 +6,9 @@ import org.springframework.stereotype.Service;
 
 import com.corebanking.dao.NewAccountRegDAO;
 import com.corebanking.domain.NewAccountRegBO;
+import com.corebanking.domain.NewOnlineAccountBO;
 import com.corebanking.dto.NewAccountRegDTO;
+import com.corebanking.dto.NewOnlineAccountDTO;
 
 @Service
 public class NewAccountRegServiceImpl implements NewAccountRegService{
@@ -30,5 +32,19 @@ public class NewAccountRegServiceImpl implements NewAccountRegService{
 			return "Your Information Registered SuccessFully.. With Account Number  "+id;
 		else
 			return "Registration Failed";
+	}
+
+	@Override
+	public String registerOnlineAccount(NewOnlineAccountDTO dto) {
+	NewOnlineAccountBO bo=null;
+		
+		//convert DTO Object to Bo object
+		bo=new NewOnlineAccountBO();
+		BeanUtils.copyProperties(dto, bo);
+		
+		//use dao
+		Long id=0l;
+		id=dao.insertNewCustomer(bo);
+		return null;
 	}
 }
