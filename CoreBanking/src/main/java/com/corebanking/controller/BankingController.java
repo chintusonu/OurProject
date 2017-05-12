@@ -10,10 +10,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
+import com.corebanking.domain.NetBankingBO;
 import com.corebanking.domain.NewAccountAddrsBO;
 import com.corebanking.domain.NewAccountRegBO;
+import com.corebanking.dto.NetBankingDTO;
 import com.corebanking.dto.NewAccountRegDTO;
+import com.corebanking.service.NetBankingService;
 import com.corebanking.service.NewAccountRegService;
 
 @Controller
@@ -21,6 +25,9 @@ public class BankingController {
 	
 	@Autowired
 	private NewAccountRegService service;
+	
+	@Autowired
+	private NetBankingService netService;
 	
 	@RequestMapping(value="getRegForm.htm")
 	public String showNewRegistrationForm(){
@@ -45,6 +52,29 @@ public class BankingController {
 		result=service.register(dto);
 		map.put("Result", result);
 		return "result";
+	}
+	
+	@RequestMapping(value="/getNetForm.htm")
+	public ModelAndView showNetBankingForm(){
+		ModelAndView modelAndView=new ModelAndView("net_banking");
+		return modelAndView;
+	}
+	
+	@RequestMapping(value="/netBanking.htm",method=RequestMethod.POST)
+	public String submitNetBankingForm(Map<String,Object> map,@ModelAttribute("netBanking") NetBankingBO bankingBO){
+		String result=null;
+		NetBankingDTO dto=null;
+		
+		//convert bo to dto
+		dto=new NetBankingDTO();
+		BeanUtils.copyProperties(bankingBO, dto);
+		
+		//use service
+		result=netService.registerNetBanking(dto);
+		
+		map.put("Result", result);
+		return "result";
 		
 	}
+	
 }

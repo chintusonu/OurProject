@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -54,10 +55,9 @@ h3 {
 
 </header>
 <body>
-	<table width="100%" border="1" cellpadding="1" cellspacing="0">
-		<tr>
 
-		</tr>
+	<table width="100%" border="1" cellpadding="1" cellspacing="0">
+		
 		<tr>
 			<th colspan="2" scope="col">
 				<!-- form page start -->
@@ -74,6 +74,14 @@ h3 {
 								style="height: 20px;"><font color="#FFFFFF">Personal
 									Details</font></th>
 						</tr>
+						<tr>
+			<td>
+			<p>
+				<form:errors path="accountRegBO.*"/>
+				<form:errors path="addrsBO.*"/>
+				</p>
+			</td>
+		</tr>
 
 						<tr>
 							<td width="30%"><div align="left">Customer Type*</div></td>
@@ -254,8 +262,8 @@ h3 {
 
 								</div></td>
 						</tr>
-
-						<!-- <tr>
+<!-- 
+						 <tr>
 							<th colspan="3" bgcolor="#2E73A4" align="left" scope="col"
 								style="height: 20px;"><font color="#FFFFFF">Permanent
 									Address</font></th>
@@ -342,8 +350,8 @@ h3 {
 									<input name="MOBILE_NO" type="text" id="" />
 
 								</div></td>
-						</tr>
- -->
+						</tr> -->
+ 
 	 						<tr>
 							<td width="95%" colspan="3"><div align="center">
 									<input type="submit" value="Proceed">

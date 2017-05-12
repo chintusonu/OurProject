@@ -26,6 +26,7 @@
 			<list>
 				<value>com.corebanking.domain.NewAccountRegBO</value>
 				<value>com.corebanking.domain.NewAccountAddrsBO</value>
+				<value>com.corebanking.domain.NetBankingBO</value>
 			</list>
 		</property>
 
