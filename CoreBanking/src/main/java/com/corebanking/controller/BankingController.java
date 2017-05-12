@@ -32,7 +32,7 @@ public class BankingController {
 	@RequestMapping(value="getRegForm.htm")
 	public String showNewRegistrationForm(){
 		return "new_account_reg";
-	}
+	}	
 	
 	@RequestMapping(value="/newregister.htm",method=RequestMethod.POST)
 	public String submitRegistrationForm(Map<String,Object> map,@ModelAttribute("accountRegBO") NewAccountRegBO accountRegBO,NewAccountAddrsBO addrsBO){
@@ -76,5 +76,4 @@ public class BankingController {
 		return "result";
 		
 	}
-	
 }

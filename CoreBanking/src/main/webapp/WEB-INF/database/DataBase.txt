@@ -13,7 +13,6 @@ Sequence
 ========
 CREATE SEQUENCE SBI_AC_NO INCREMENT BY 1 START WITH 3000000000;
 
-3000000007
 
 For Net-Banking
 ===============
