@@ -77,7 +77,12 @@ h3 {
 				<form id="form1" name="form1" method="post" action="newregister.htm">
 					<table width="100%" border="1" cellpadding="2" cellspacing="2"
 						style="border: #000000 solid 2px; padding: 5px;">
+							<tr>
+						<th colspan="3" bgcolor="#2E73A4" align="rignt" scope="col"
+								style="height: 20px;"><font color="#FFFFFF" >WELCOME TO STATE BANK OF INDIA</font></th>
+						</tr>
 						<tr>
+						
 							<th colspan="3" bgcolor="#000000" scope="col"
 								style="height: 20px;"><font color="#FFFFFF">Customer
 									Registration For new Account</font></th>
@@ -364,10 +369,6 @@ h3 {
 
 								</div></td>
 						</tr> -->
-								<input name="MOBILE_NO1" type="text" id="" />
-								</div>
-								</td>
-						</tr>
 	 						<tr>
 							<td width="95%" colspan="3"><div align="center">
 									<input type="submit" value="Proceed">
