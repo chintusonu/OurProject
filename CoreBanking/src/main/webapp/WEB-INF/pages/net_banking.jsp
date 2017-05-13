@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,17 +17,23 @@ h3 {
 }
 </style>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Customer NetBanking Registration</title>
 </head>
 <header style="background-color: #164285">
-<hr>
+	<hr>
+	<div class="header">
+		<div id="logo">
+			<img src="../images/SBI-Banking.png" alt="" height="30">
+		</div>
+	</div>
 </header>
 <body>
-	<table width="100%" border="0" cellpadding="1" cellspacing="0">
+	<table width="100%" border="0" cellpadding="1"
+		cellspacing="0">
 
 		<tr>
-			<th colspan="2" scope="col">
-				<form:form id="form1" name="form1" method="POST" action="netBanking.htm" commandName="netCmd">
+			<th colspan="2" scope="col"><form:form id="form1" name="form1"
+					method="POST" action="netBanking.htm" commandName="netCmd">
 					<table width="100%" border="0" cellpadding="2" cellspacing="2"
 						style="border: #000000 solid 2px; padding: 5px;">
 						<tr>
@@ -35,20 +41,12 @@ h3 {
 								style="height: 20px;"><font color="#FFFFFF">Customer
 									Registration For new Account</font></th>
 						</tr>
-						<!-- <tr>
-							<td width="28%" rowspan="1">
-								<div align="center">
-									<img src="../images/kdmconfig.png" width="48" height="48" />
-								</div>
-							</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-						</tr> -->
 						<tr>
 							<td width="24%"><div align="left">Account Number*</div></td>
 							<td width="48%"><label>
 									<div align="left">
-										<form:input path="ACCOUNT_NUMBER" type="text" id="username" readonly="true"/>
+										<form:input path="ACCOUNT_NUMBER" type="text" id="username"
+											readonly="true" />
 									</div>
 							</label></td>
 						</tr>
@@ -327,7 +325,8 @@ h3 {
 						<tr>
 							<td><div align="left">Branch Code</div></td>
 							<td><div align="left">
-									<form:input path="BRANCH_CODE" type="text" id="answer" size="30" readonly="true"/>
+									<form:input path="BRANCH_CODE" type="text" id="answer"
+										size="30" readonly="true" />
 								</div></td>
 						</tr>
 						<tr>
@@ -355,34 +354,16 @@ h3 {
 									<input name="email" type="text" id="email" />
 								</div></td>
 						</tr> -->
-
 						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-						</tr>
-						<tr>
-							<td><label>
-									<div align="right">
-										<input type="submit" value="Register">
-									</div>
-							</label></td>
-						</tr>
-						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td width="95%" colspan="2"><div align="center">
+									<input type="submit" value="Proceed">
+								</div></td>
 						</tr>
 					</table>
-				</form:form>
-			</th>
-		</tr>
-		<tr>
-			<td width="50%">&nbsp;</td>
-			<td width="50%">&nbsp;</td>
+				</form:form></th>
 		</tr>
 	</table>
 	<h2>Mandatory fields are marked with an asterisk (*)</h2>
-
 </body>
 <footer>
 <h3>@ Copyright SBI</h3>
