@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -26,7 +27,7 @@ h3 {
 
 		<tr>
 			<th colspan="2" scope="col">
-				<form id="form1" name="form1" method="post" action="netBanking.htm">
+				<form:form id="form1" name="form1" method="POST" action="netBanking.htm" commandName="netCmd">
 					<table width="100%" border="0" cellpadding="2" cellspacing="2"
 						style="border: #000000 solid 2px; padding: 5px;">
 						<tr>
@@ -47,16 +48,16 @@ h3 {
 							<td width="24%"><div align="left">Account Number*</div></td>
 							<td width="48%"><label>
 									<div align="left">
-										<input name="ACCOUNT_NUMBER" type="text" id="username" />
+										<form:input path="ACCOUNT_NUMBER" type="text" id="username" readonly="true"/>
 									</div>
 							</label></td>
 						</tr>
-						<!-- <tr>
+						<tr>
 							<td><div align="left">CIF Number *</div></td>
 							<td><div align="left">
-									<input name="CIF_NUMBER" type="text" id="cif" />
+									<form:input path="CIF_NUMBER" type="text" id="cif" />
 								</div></td>
-						</tr> -->
+						</tr>
 						<tr>
 							<td><div align="left">Bank *</div></td>
 							<td><div align="left">
@@ -71,7 +72,7 @@ h3 {
 						<tr>
 							<td><div align="left">Country*</div></td>
 							<td><div align="left">
-									<select name="COUNTRY">
+									<form:select path="COUNTRY">
 										<option value="">Country...</option>
 										<option value="AF">Afghanistan</option>
 										<option value="AL">Albania</option>
@@ -320,31 +321,31 @@ h3 {
 										<option value="ZR">Zaire</option>
 										<option value="ZM">Zambia</option>
 										<option value="ZW">Zimbabwe</option>
-									</select>
+									</form:select>
 								</div></td>
 						</tr>
 						<tr>
 							<td><div align="left">Branch Code</div></td>
 							<td><div align="left">
-									<input name="BRANCH_CODE" type="text" id="answer" size="30" />
+									<form:input path="BRANCH_CODE" type="text" id="answer" size="30" readonly="true"/>
 								</div></td>
 						</tr>
 						<tr>
 							<td><div align="left">Mobile:</div></td>
 							<td><div align="left">
-									<input name="MOBILE" type="text" id="mobile" />
+									<form:input path="MOBILE" type="text" id="mobile" />
 								</div></td>
 						</tr>
 						<tr>
 							<td><div align="left">Facility Required *</div></td>
 							<td><div align="left">
-									<select name="TX_TYPE">
+									<form:select path="TX_TYPE">
 										<option value="">--Select facility--</option>
 										<option value="Full Transaction">Full Transaction
 											Rights</option>
 										<option value="Limited Transaction">Limited
 											Transaction Rights</option>
-									</select>
+									</form:select>
 								</div></td>
 						</tr>
 						<!-- <tr>
@@ -372,7 +373,7 @@ h3 {
 							<td>&nbsp;</td>
 						</tr>
 					</table>
-				</form>
+				</form:form>
 			</th>
 		</tr>
 		<tr>

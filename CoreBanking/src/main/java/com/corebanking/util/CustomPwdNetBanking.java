@@ -3,14 +3,9 @@ package com.corebanking.util;
 import java.io.Serializable;
 import java.util.Random;
 
-import org.hibernate.HibernateException;
-import org.hibernate.engine.spi.SessionImplementor;
-import org.hibernate.id.IdentifierGenerator;
+public class CustomPwdNetBanking implements Serializable{
 
-public class CustomPwdNetBanking implements IdentifierGenerator {
-
-	@Override
-	public Serializable generate(SessionImplementor session, Object obj) throws HibernateException {
+	public static int genPass(){
 		int pwd=0;
 		Random random=null;
 		

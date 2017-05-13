@@ -1,29 +1,13 @@
-package com.corebanking.domain;
+package com.corebanking.command;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Parameter;
-
-@Entity
-@Table(name="NETBANKING")
-public class NetBankingBO {
-	//@Id
+public class NetBankingCommand {
 	private Long ACCOUNT_NUMBER;
-	@Id
-	@GenericGenerator(name = "gen1", strategy = "sequence", parameters = @Parameter(name = "sequence_name", value = "CIF_NO"))
-	@GeneratedValue(generator = "gen1")
 	private Long CIF_NUMBER;
 	private String BANK;
 	private String COUNTRY;
 	private String BRANCH_CODE;
 	private Long MOBILE;
 	private String TX_TYPE;
-	private String USER_ID;
-	private String PASSWORD;
 
 	public Long getACCOUNT_NUMBER() {
 		return ACCOUNT_NUMBER;
@@ -79,22 +63,6 @@ public class NetBankingBO {
 
 	public void setTX_TYPE(String tX_TYPE) {
 		TX_TYPE = tX_TYPE;
-	}
-
-	public String getUSER_ID() {
-		return USER_ID;
-	}
-
-	public void setUSER_ID(String uSER_ID) {
-		USER_ID = uSER_ID;
-	}
-
-	public String getPASSWORD() {
-		return PASSWORD;
-	}
-
-	public void setPASSWORD(String pASSWORD) {
-		PASSWORD = pASSWORD;
 	}
 
 }
