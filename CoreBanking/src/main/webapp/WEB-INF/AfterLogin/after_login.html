@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('#depo').click(function(){
+				$('#transAm').hide();
+				$('#withdrow').hide();
+				$('#getBal').hide();
+				$('#viewRepo').hide();
+				$('#logout').hide();
+				$('#deposite').show();
+			});
+			
+			$('#withdr').click(function(){
+				$('#getBal').hide();
+				$('#deposite').hide();
+				$('#transAm').hide();
+				$('#viewRepo').hide();
+				$('#logout').hide();
+				$('#withdrow').show();
+			});
+			$('#getBalance').click(function(){
+				$('#transAm').hide();
+				$('#deposite').hide();
+				$('#withdrow').hide();
+				$('#viewRepo').hide();
+				$('#logout').hide();
+				$('#getBal').show();
+			});
+			$('#transAmt').click(function(){
+				$('#deposite').hide();
+				$('#withdrow').hide();
+				$('#getBal').hide();
+				$('#viewRepo').hide();
+				$('#logout').hide();
+				$('#transAm').show();
+			});
+			
+			$('#viewReport').click(function(){
+				$('#deposite').hide();
+				$('#withdrow').hide();
+				$('#getBal').hide();
+				$('#transAm').hide();
+				$('#logout').hide();
+				$('#viewRepo').show();
+			});
+			$('#logOut').click(function(){
+				$('#deposite').hide();
+				$('#withdrow').hide();
+				$('#getBal').hide();
+				$('#transAm').hide();
+				$('#viewRepo').hide();
+				$('#logout').show();
+			});
+		});
+	</script>
+	
+	<style type="text/css">
+		div#deposite{
+			display: none;
+		}
+		div#withdrow{
+			display: none;
+		}
+		div#getBal{
+			display: none;
+		}
+		div#transAm{
+			display: none;
+		}
+		div#viewRepo{
+			display: none;
+		}
+		div#logout{
+			display: none;
+		}
+	</style>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body class="container">
+<div class="jumbotron"></div>
+<div class="row">
+	<div class="col-md-3"style="background:green;" id="menu">
+		<div class="menu">
+		<ul class="nav nav-stacked">
+			<li><a href="#">Welcome</a></li>
+			<li><a href="#deposite.html" id="depo">Deposite</a></li>
+			<li><a href="#withdraw.jsp" id="withdr">Do Withdraw</a></li>
+			<li><a href="#get-balance.jsp" id="getBalance">Get Balance</a></li>
+			<li><a href="#transfer.jsp" id="transAmt">Trasnsfer Amount</a></li>
+			<li><a href="#view-reports.jsp" id="viewReport">View Report</a></li>
+			<li><a href="#logOff.jsp" id="logOut">LogOut</a></li>
+		</ul>
+	</div>
+	</div>
+	<div class="col-md-8"style="background: pink;" id="deposite">
+	<form action="">
+		<h1 align="center">Deposite Form</h1>
+	</form>
+	</div>
+	
+	<div class="col-md-8"style="background: pink;" id="withdrow">
+	<form action="">
+		<h1 align="center">WithDrow Form</h1>
+	</form>
+	</div>
+	
+	<div class="col-md-8"style="background: pink;" id="getBal">
+	<form action="">
+		<h1 align="center">GetBalance Form</h1>
+	</form>
+	</div>
+	
+	<div class="col-md-8"style="background: pink;" id="transAm">
+	<form action="">
+		<h1 align="center">Transfor Amount Form</h1>
+	</form>
+	</div>
+	
+	<div class="col-md-8"style="background: pink;" id="viewRepo">
+	<form action="">
+		<h1 align="center">View Report Form</h1>
+	</form>
+	</div>
+	
+	<div class="col-md-8"style="background: pink;" id="logout">
+	<form action="">
+		<h1 align="center">Logout Form</h1>
+	</form>
+	</div>
+	
+</div>
+</body>
+</html>

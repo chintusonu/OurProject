@@ -8,6 +8,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +18,7 @@ import com.corebanking.command.NetBankingCommand;
 import com.corebanking.domain.NetBankingBO;
 import com.corebanking.domain.NewAccountAddrsBO;
 import com.corebanking.domain.NewAccountRegBO;
+import com.corebanking.domain.NewAccountRegModel;
 import com.corebanking.dto.NetBankingDTO;
 import com.corebanking.dto.NewAccountRegDTO;
 import com.corebanking.service.NetBankingService;
@@ -40,12 +42,16 @@ public class BankingController {
 
 	@RequestMapping(value = "/newregister.htm", method = RequestMethod.POST)
 	public String submitRegistrationForm(Map<String, Object> map,
-			@ModelAttribute("accountRegBO") NewAccountRegBO accountRegBO, NewAccountAddrsBO addrsBO) {
+			@ModelAttribute("accountRegBO") NewAccountRegModel accountRegModel) {
 		String result = null;
 		NewAccountRegDTO dto = null;
-
+		
+		NewAccountRegBO accountRegBO = new NewAccountRegBO();
+		BeanUtils.copyProperties(accountRegModel, accountRegBO);
+		
 		List<NewAccountAddrsBO> list = new ArrayList<NewAccountAddrsBO>();
-		list.add(addrsBO);
+		list.add(accountRegModel.getTempAddress());
+		list.add(accountRegModel.getPermanentAddress());
 
 		accountRegBO.setADDRS(list);
 
