@@ -90,14 +90,6 @@ h3 {
 								style="height: 20px;"><font color="#FFFFFF">Personal
 									Details</font></th>
 						</tr>
-						<tr>
-							<td>
-								<p>
-									<form:errors path="accountRegBO.*" />
-									<form:errors path="addrsBO.*" />
-								</p>
-							</td>
-						</tr>
 
 						<tr>
 							<td width="30%"><div align="left">Customer Type*</div></td>
@@ -179,9 +171,6 @@ h3 {
 							</td>
 						</tr>
 
-						</div>
-						</td>
-						</tr>
 						<tr>
 							<td width="30%"><div align="left">Adhar No*</div></td>
 							<td width="65%" colspan="2"><div align="left">
@@ -216,7 +205,7 @@ h3 {
 						<tr>
 							<td width="30%"><div align="left">State/U.T.*</div></td>
 							<td width="65%" colspan="2"><div align="left">
-									<select name=tempAddress.STATE>
+									<select name="tempAddress.STATE">
 										<option value="">--Select State--</option>
 										<option value="Odisha">Odisha</option>
 									</select>
