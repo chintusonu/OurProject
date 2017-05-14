@@ -1,5 +1,27 @@
 <html>
 <head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	
 <script language="javascript">
 		function check(form) { /*function to check userid & password*/
 			/*the following code checkes whether the entered userid and password are matching*/
@@ -11,15 +33,56 @@
 			}
 		}
 	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#user').click(function(){
+				$('#user').css("background-color","Maroon");
+			});
+			$('#pwd').click(function(){
+				$('#pwd').css("background-color","Maroon");
+			});
+		});
+	</script>
+	<style type="text/css">
+		#login{
+			margin-left: 350px;
+		}
+		#btn1{
+			margin-left: 110px;
+		}
+		#page{
+			border-radius: 15px;
+			border:solid 1px;
+			padding: 50px;
+			background: gray;
+		}
+		#user{
+			font-weight: bold;
+			color: white;
+		}
+		#pwd{
+			font-weight: bold;
+			color: white;
+		}
+	</style>
 <title>Login page</title>
 </head>
 <body>
-	<h1>LOGIN PAGE</h1>
-	<form name="login">
-		Username<input type="text" name="userid" /><br> Password<input
-			type="password" name="pswrd" /><br> <input type="button"
-			onclick="check(this.form)" value="Login" /> <input type="reset"
+<div class="container">
+<div class="jumbotron"></div>
+<div class="row">
+<div class="col-md-5" id="login">
+	<h1 align="center">LOGIN PAGE</h1>
+	<div id="page">
+	<form name="login" action="#">
+		<b>Username</b><input class="form-control" placeholder="Enter UserName" type="text" name="userid" id="user"/><br> <b>Password</b><input
+			type="password" class="form-control" placeholder="Enter Password" name="pswrd" id="pwd"/><br> <input id="btn1" class="btn btn-success" type="button"
+			onclick="check(this.form)" value="Login" /> <input id="btn2" class="btn btn-success" type="reset" class="button"
 			value="Cancel" />
 	</form>
+	</div>
+	</div>
+</div>
+	</div>
 </body>
 </html>
