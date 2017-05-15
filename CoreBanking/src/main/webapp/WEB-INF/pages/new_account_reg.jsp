@@ -28,11 +28,11 @@
 <script>
 	function FillAddress(f) {
 		if (f.billingtoo.checked == true) {
-			f.ADDRESS_TYPE.value = f.ADDRESS_TYPE.value;
-			f.ADDRESS.value = f.ADDRESS.value;
-			f.STATE.value = f.STATE.value;
-			f.PIN.value = f.PIN.value;
-			f.CITY.value = f.CITY.value;
+			f.permanentAddress.ADDRESS_TYPE.value = f.tempAddress.ADDRESS.value;
+			f.permanentAddress.ADDRESS.value = f.tempAddress.ADDRESS.value;
+			f.permanenAddress.STATE.value = f.tempAddress.STATE.value;
+			f.permanenAddress.PIN.value = f.tempAddress.STATE.PIN.value;
+			f.permanenAddress.CITY.value = f.tempAddress.STATE.CITY.value;
 		}
 	}
 </script>
